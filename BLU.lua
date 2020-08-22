@@ -95,6 +95,9 @@ function get_sets()
     Rosmerta.Cure = { name = "Rosmerta's Cape", augments = { 'MND+20','Eva.+20 /Mag. Eva.+20','"Cure" potency +10%' } }
     Rosmerta.MagicEva = { name = "Rosmerta's Cape", augments = { 'INT+20','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Haste+10','Mag. Evasion+15' } }
 	
+	RawhideLegs = {}
+	RawhideLegs.Idle = { name="Rawhide Trousers", augments={'MP+50','"Fast Cast"+5','"Refresh"+1', } }
+	
 	
 	
 	
@@ -105,34 +108,34 @@ function get_sets()
     sets.Idle.index = { 'Standard', 'DTRefresh', 'DT' }
     Idle_ind = 1
     sets.Idle.Standard = {
-        ammo = "Staunch Tathlum ",
-        head = "Aya. Zucchetto +1",
+        ammo = "Staunch Tathlum",
+        head = "Rawhide Mask",
         neck = "Sanctity Necklace",
 		ear1 = "Hearty Earring",
         ear2 = "Dawn Earring",
-        body = "Ayanmo Corazza +1",
+        body = "Assim. Jubbah +1",
         hands = "Aya. Manopolas +1",
-        ring1 = "Defending ring",
-        ring2 = "Sheltered Ring",
+        ring1 = "Sheltered Ring",
+        ring2 = "Defending Ring",
         back = "Moonbeam Cape",
         waist = "Flume Belt",
-        legs = "Ayanmo Cosciales +1",
+        legs = RawhideLegs.Idle,
         feet = "Aya. Gambieras +1"
     }
 
     sets.Idle.DTRefresh = {
         ammo = "Staunch Tathlum +1",
         head = HerculeanHelm.Refesh,
-        neck = "Loricate Torque +1",
+        neck = "Rawhide Mask",
 		ear1 = "Genmei Earring",
         ear2 = "Etiolation Earring",
         body = "Jhakri Robe +2",
-        hands = "Assimilator's Bazubands +3",
-        ring1 = "Defending ring",
+        hands = "Assimilator's Bazubands +1",
+        ring1 = "Defending Ring",
         ring2 = "Gelatinous Ring +1",
         back = Rosmerta.DA,
         waist = "Flume belt",
-        legs = "Carmine Cuisses +1",
+        legs = RawhideLegs.Idle,
         feet = HerculeanFeet.Idle
     }
 
@@ -143,8 +146,8 @@ function get_sets()
 		ear1 = "Genmei Earring",
         ear2 = "Etiolation Earring",
         body = "Ayanmo Corazza +2",
-        hands = "Assimilator's Bazubands +3",
-        ring1 = "Defending ring",
+        hands = "Assimilator's Bazubands +1",
+        ring1 = "Defending Ring",
         ring2 = "Shadow Ring",
         back = Rosmerta.DA,
         waist = "Flume belt",
@@ -171,8 +174,8 @@ function get_sets()
         ear2 = "Brutal Earring",
         body = AdhemarJack.TP,
         hands = AdhemarHands.TP,
-        ring1 = "Apate ring",
-        ring2 = "Rajas Ring",
+        ring1 = "Apate ring", 
+        ring2 = "Rajas Ring", 
         back = RoseCape.TP,
         waist = "Windbuffet Belt +1",
         legs = TaeonLegs.TP,
@@ -242,7 +245,7 @@ function get_sets()
         back = Rosmerta.DA,
         waist = "Kentarch Belt +1",
         legs = "Carmine Cuisses +1",
-        feet = "Assim. Charuqs +3"
+        feet = "Assim. Charuqs +1"
     }
 
     --Tizona AM3--
@@ -293,7 +296,7 @@ function get_sets()
         ear1 = "Eabani Earring",
         ear2 = "Cessance Earring",
         body = "Ayanmo Corazza +1",
-        hands = "Assimilator's Bazubands +3",
+        hands = "Assimilator's Bazubands +1",
         ring1 = "Defending ring",
         ring2 = "Purity Ring",
         back = Rosmerta.DA,
@@ -327,7 +330,7 @@ function get_sets()
         ear1 = "Odnowa Earring +1",
         ear2 = "Etiolation Earring",
         body = "Pinga Tunic",
-        hands = "Assimilator's Bazubands +3",
+        hands = "Assimilator's Bazubands +1",
         ring1 = "Defending ring",
         ring2 = "Shadow Ring",
         back = Rosmerta.MagicEva,
@@ -343,7 +346,7 @@ function get_sets()
         ear1 = "Eabani Earring",
         ear2 = "Hearty Earring",
         body = "Pinga Tunic",
-        hands = "Assimilator's Bazubands +3",
+        hands = "Assimilator's Bazubands +1",
         ring1 = "Defending Ring",
         ring2 = "Purity Ring",
         back = Rosmerta.MagicEva,
@@ -375,13 +378,13 @@ function get_sets()
         ear1 = "Eabani Earring",
         ear2 = "Telos Earring",
         body = "Ayanmo Corazza +1",
-        hands = "Assimilator's Bazubands +3",
+        hands = "Assimilator's Bazubands +1",
         ring1 = "Defending ring",
         ring2 = "Shadow Ring",
         back = Rosmerta.DA,
         legs = "Carmine Cuisses +1",
         waist = "Kentarch Belt +1",
-        feet = "Assim. Charuqs +3"
+        feet = "Assim. Charuqs +1"
     }
 	
     --Weaponskill Sets--
@@ -398,14 +401,14 @@ function get_sets()
         neck = "Fotia Gorget",
         ear1 = "Regal Earring",
         ear2 = "Brutal Earring",
-        body = "Assim. Jubbah +3",
+        body = "Assim. Jubbah +1",
         hands = AdhemarHands.TP,
         ring1 = "Epona's ring",
         ring2 = "Rufescent Ring",
         back = Rosmerta.WSD,
         waist = "Fotia Belt",
-        legs = "Luhlaza Shalwar +3",
-        feet = "Assim. Charuqs +3"
+        legs = "Luhlaza Shalwar +1",
+        feet = "Assim. Charuqs +1"
     }
 
     sets.Requiescat.Accuracy = {
@@ -415,13 +418,13 @@ function get_sets()
         ear1 = "Regal Earring",
         ear2 = "Brutal Earring",
         body = "Jhakri Robe +2",
-		hands = "Assimilator's Bazubands +3",
+		hands = "Assimilator's Bazubands +1",
         ring1 = "Epona's ring",
         ring2 = "Rufescent Ring",
         back = Rosmerta.DA,
         waist = "Fotia Belt",
-        legs = "Luhlaza Shalwar +3",
-        feet = "Assim. Charuqs +3"
+        legs = "Luhlaza Shalwar +1",
+        feet = "Assim. Charuqs +1"
     }
 
     sets.CDC = {}
@@ -494,7 +497,7 @@ function get_sets()
         neck = "Mirage Stole +1",
         ear1 = "Moonshade Earring",
         ear2 = "Regal Earring",
-        body = "Assim. Jubbah +3",
+        body = "Assim. Jubbah +1",
         hands = "Jhakri Cuffs +2",
         ring1 = "Rufescent Ring",
 		ring2 = "Karieyh Ring +1",
@@ -554,7 +557,7 @@ function get_sets()
         neck = "Mirage Stole +1",
         ear1 = "Moonshade Earring",
         ear2 = "Regal Earring",
-        body = "Assim. Jubbah +3",
+        body = "Assim. Jubbah +1",
         hands = "Jhakri Cuffs +2",
         ring1 = "Rufescent Ring",
 		ring2 = "Karieyh Ring +1",
@@ -816,7 +819,7 @@ function get_sets()
         neck = "Incanter's Torque",
         ear1 = "Loquac. Earring",
         ear2 = "Etiolation Earring",
-        body = "Assim. Jubbah +3",
+        body = "Assim. Jubbah +1",
         hands = "Hashishin Bazubands +1",
         ring1 = "Stikini Ring",
         ring2 = "Stikini Ring",
@@ -855,7 +858,7 @@ function get_sets()
         ring2 = "Rahab Ring",
         back = Rosmerta.Nuke,
         waist = "Witful Belt",
-        legs = "Ayanmo Cosciales +1",
+        legs = RawhideLegs.Idle,
         feet = "Carmine Greaves +1"
 	}
 
@@ -913,7 +916,7 @@ function get_sets()
 		ear1 = "Eabani Earring",
         ear2 = "Etiolation Earring",
         body = "Ayanmo Corazza +1",
-        hands = "Assimilator's Bazubands +3",
+        hands = "Assimilator's Bazubands +1",
         ring1 = "Defending ring",
         ring2 = "Gelatinous Ring +1",
         back = Rosmerta.MagicEva,
@@ -936,7 +939,7 @@ function get_sets()
         ear1 = "Eabani Earring",
         ear2 = "Etiolation Earring",
         body = "Pinga Tunic",
-        hands = "Assimilator's Bazubands +3",
+        hands = "Assimilator's Bazubands +1",
         ring1 = "Defending ring",
         ring2 = "Purity Ring",
         back = Rosmerta.MagicEva,
@@ -953,7 +956,7 @@ function get_sets()
 		ear1 = "Eabani Earring",
         ear2 = "Etiolation Earring",
         body = "Ayanmo Corazza +1", 
-        hands = "Assimilator's Bazubands +3",
+        hands = "Assimilator's Bazubands +1",
         ring1 = "Defending ring",
         ring2 = "Purity Ring",
         back = Rosmerta.MagicEva,
@@ -972,7 +975,7 @@ function get_sets()
 
     sets.JA.Efflux = { legs = "Hashishin Tayt +1", back= Rosmerta.WSD }
 
-    sets.JA.AzureLore = { hands = "Luhlaza bazubands" }
+    sets.JA.AzureLore = { hands = "Luhlaza bazubands +1" }
 
     sets.JA.Provoke = set_combine(sets.BlueMagic.Enmity, {})
 
@@ -1808,7 +1811,7 @@ function mc_Magic(spell, act)
             elseif BlueMagic_Light:contains(spell.english) then
 				if spell.english == 'Magic Hammer' then
 					ChangeGear(set_combine(sets.BlueMagic.INT[sets.BlueMagic.INT.index[MAB_ind]],{
-						head = 'Assim. Keffiyeh +3',
+						head = 'Assim. Keffiyeh +1',
 					--	hands = "Hashishin Bazubands +1", - For a chunk of time off of Magic Hammer if desired, maybe the +2/3 one day when released
 					}))
 				else

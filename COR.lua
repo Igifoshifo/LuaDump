@@ -114,7 +114,7 @@ function get_sets()
 								
 		sets.TP.DT = {
 					head="Meghanada Visor +1", neck="Twilight torque", ear1="Bladeborn Earring", ear2="Steelflash Earring",
-					body="Meg. Cuirie +2", hands="Meg. Gloves +1", ring1="Defending ring", ring2="Lunette Ring +1",
+					body="Meg. Cuirie +2", hands="Meg. Gloves +2", ring1="Defending ring", ring2="Lunette Ring +1",
 					back="Moonbeam Cape", waist="Flume belt", legs="Meg. Chausses +1", feet="Meg. Jam. +1"}
 		
 		--Snapshot Set--
@@ -128,7 +128,7 @@ function get_sets()
 		sets.Idle = {}
 		
 		sets.Idle = {head="Meghanada Visor +2", neck="Bathy Choker +1", ear1="Hearty earring", ear2="Dawn earring",
-					body="Meg. Cuirie +2", hands="Meg. Gloves +1", ring1="Defending ring", ring2="Paguroidea Ring",
+					body="Meg. Cuirie +2", hands="Meg. Gloves +2", ring1="Defending ring", ring2="Paguroidea Ring",
 					back=CamCape.IdleDTMagEva, waist="Flume belt", legs="Meg. Chausses +2", feet="Meg. Jam. +1"}
 		
 		--Ranged TP Sets--
@@ -143,7 +143,7 @@ function get_sets()
 								  
 		sets.RA.Acc = {
 					head="Meghanada Visor +1", neck="Comm. Charm +1", ear1="Volley earring", ear2="Clearview earring",				  
-					body="Mummu Jacket +2", hands="Meg. Gloves +1", ring1="Longshot Ring", ring2="Hajduk ring",
+					body="Mummu Jacket +2", hands="Meg. Gloves +2", ring1="Longshot Ring", ring2="Hajduk ring",
 					back=CamCape.Last, waist="Yemaya Belt", legs="Meg. Chausses +1", feet="Meg. Jam. +1"}						   
 								   
 		--Melee WS Sets--
@@ -154,7 +154,7 @@ function get_sets()
 		
 		sets.Requi.Reg = {
 				   head="Meghanada Visor +1", neck="Breeze Gorget", ear1="Moonshade Earring", ear2="Tati Earring",
-				   body="Meg. Cuirie +2", hands="Meg. Gloves +1", ring1="Epona's ring", ring2="Aquasoul ring",
+				   body="Meg. Cuirie +2", hands="Meg. Gloves +2", ring1="Epona's ring", ring2="Aquasoul ring",
 				   back="Atheling mantle", waist="Breeze belt", legs="Meg. Chausses +1", feet="Meg. Jam. +1"}
 								  
 		sets.Requi.Acc = set_combine(sets.Requi.Reg,{ear1="Bladeborn earring", 
@@ -175,7 +175,7 @@ function get_sets()
 		
 		sets.SBlade.Reg = {
 					head="Meghanada Visor +1", neck="Lacono Neck. +1", ear1="Tati earring", ear2="Tati Earring",
-					 body="Meg. Cuirie +2", hands="Meg. Gloves +1", ring1="Overbearing Ring", ring2="Ifrit ring +1",
+					 body="Meg. Cuirie +2", hands="Meg. Gloves +2", ring1="Overbearing Ring", ring2="Ifrit ring +1",
 					 back=CamCape.SavageBl, waist="Prosilio Belt +1", legs="Meg. Chausses +1", feet="Meg. Jam. +1"}
 					 
 		sets.SBlade.Acc = set_combine(sets.SBlade.Reg,{head="Meghanada Visor",body="Meghanada Cuirie +1",
@@ -217,7 +217,7 @@ function get_sets()
 		
 		sets.LastS.Reg = {ammo="Eminent Bullet",
 						head="Meghanada Visor +1",neck="Fotia Gorget",ear1="Bladeborn earring",ear2="Brutal Earring",
-						body="Meg. Cuirie +2", hands="Meg. Gloves +1",ring1="Garuda Ring +1",ring2="Apate ring",
+						body="Meg. Cuirie +2", hands="Meg. Gloves +2",ring1="Garuda Ring +1",ring2="Apate ring",
 						back=CamCape.Last,waist="Fotia Belt", legs="Meg. Chausses +1",feet="Meg. Jam. +1"}
 		
 		sets.LastS.Acc = set_combine(sets.LastS.Reg,{ring1="Longshot Ring",head="Meghanada Visor",body="Meghanada Cuirie +1",

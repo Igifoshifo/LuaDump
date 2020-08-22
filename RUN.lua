@@ -30,6 +30,10 @@ function get_sets()
 	AdhemarHead = {}
 	AdhemarHead.TP = {name="Adhemar Bonnet", augments={'STR+10', 'DEX+10', 'Attack+15'}}
 	
+	OgmaCape = {}
+	OgmaCape.Tank = { name="Ogma's cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Enmity+10','Phys. dmg. taken-10%',}}
+	OgmaCape.DD = { name="Ogma's cape", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}
+	
 	TaeonHead = {}
 	
 	TaeonBody = {}
@@ -52,19 +56,20 @@ function get_sets()
 		right_ear="Brachyura Earring",
 		left_ring="Defending Ring",
 		right_ring="Moonbeam Ring",
-		back="Moonbeam Cape",
+		back= OgmaCape.Tank,
 	}
 		
 	sets.Idle.Standard = {
+		ammo="Staunch Tathlum",
 		head="Meghanada Visor +2", 
 		neck="Bathy Choker +1", 
 		ear1="Hearty earring", 
 		ear2="Dawn earring",
 		body="Runeist Coat +1", 
-		hands="Meg. Gloves +1", 
-		ring1="Defending ring", 
-		ring2="Paguroidea Ring",
-		back="Moonbeam Cape", 
+		hands="Meg. Gloves +2", 
+		left_ring="Defending ring", 
+		right_ring="Paguroidea Ring",
+		back=OgmaCape.Tank, 
 		waist="Flume belt", 
 		legs="Meg. Chausses +2", 
 		feet="Meg. Jam. +1"
@@ -102,7 +107,7 @@ function get_sets()
 		hands = "Adhemar Wristbands",
 		ring1 = "Epona's ring",
 		ring2 = "Niqmaddu Ring",
-		--back = Ogma.TP,
+		back = OgmaCape.DD,
 		waist = "Reiki Yotai",
 		legs = "Carmine Cuisses +1",
 		--feet = HerculeanFeet.DW
@@ -119,7 +124,7 @@ function get_sets()
 		hands = "Adhemar Wristbands +1",
 		ring1 = "Epona's ring",
 		ring2 = "Niqmaddu Ring",
-		--back = Ogma.TP,
+		back = OgmaCape.DD,
 		waist = "Windbuffet Belt +1",
 		legs = "Samnuha Tights",
 		--feet = HerculeanFeet.QA
@@ -135,7 +140,7 @@ function get_sets()
 		hands = "Adhemar Wristbands +1",
 		ring1 = "Epona's ring",
 		ring2 = "Niqmaddu Ring",
-		--back = Ogma.TP,
+		back = OgmaCape.DD,
 		waist = "Kentarch Belt +1",
 		legs = "Samnuha Tights",
 		--feet = HerculeanFeet.TA
@@ -151,7 +156,7 @@ function get_sets()
 		hands = "Adhemar Wristbands +1",
 		ring1 = "Epona's ring",
 		ring2 = "Niqmaddu Ring",
-		--back = Ogma.TP,
+		back = OgmaCape.DD,
 		waist = "Kentarch Belt +1",
 		legs = "Samnuha Tights",
 		--feet = HerculeanFeet.TA
@@ -167,7 +172,7 @@ function get_sets()
 		--hands = HerculeanGloves.HighAcc,
 		ring1 = "Cacoethic Ring +1",
 		ring2 = "Niqmaddu Ring",
-		--back = Ogma.TP,
+		back = OgmaCape.DD,
 		waist = "Kentarch Belt +1",
 		legs = "Carmine Cuisses +1",
 		--feet = HerculeanFeet.CritDmg
@@ -194,7 +199,7 @@ function get_sets()
 		right_ear="Brutal Earring",
 		left_ring="Rajas Ring",
 		right_ring="Moonbeam Ring",
-		back="Moonbeam Cape"
+		back=OgmaCape.DD
 	}
 
 	sets.TwoHandedTP.AccuracyLite = {
@@ -210,7 +215,7 @@ function get_sets()
 		right_ear="Mache Earring +1",
 		left_ring="Rajas Ring",
 		right_ring="Moonbeam Ring",
-		back="Moonbeam Cape"
+		back=OgmaCape.DD
 	}
 
 	sets.TwoHandedTP.AccuracyMid = {
@@ -226,7 +231,7 @@ function get_sets()
 		right_ear="Mache Earring +1",
 		left_ring="Rajas Ring",
 		right_ring="Moonbeam Ring",
-		back="Moonbeam Cape"
+		back=OgmaCape.DD
 	}
 
 	sets.TwoHandedTP.AccuracyFull = {
@@ -239,7 +244,7 @@ function get_sets()
 		hands=AdhemarWrist.TP, 
 		ring1="Defending ring", 
 		ring2="Moonbeam Ring",
-		back="Moonbeam Cape", 
+		back=OgmaCape.DD, 
 		waist="Windbuffet Belt +1", 
 		legs="Meg. Chausses +2", 
 		feet="Meg. Jam. +1"
@@ -300,8 +305,8 @@ function get_sets()
 		left_ear="Mache Earring +1",
 		right_ear="Brutal Earring",
 		left_ring="Rajas Ring",
-		right_ring="Moonbeam Ring",`
-		back="Moonbeam Cape"
+		right_ring="Moonbeam Ring",
+		back=OgmaCape.Tank
 	}
 	--Capped DT with DD Gear
 	sets.TankingTP.TankHyb = {
@@ -314,7 +319,7 @@ function get_sets()
 		hands = AdhemarWrist.TP,
 		ring1 = "Defending ring",
 		ring2 = "Moonbeam Ring",
-		back = "Moonbeam Cape",
+		back = OgmaCape.DD,
 		waist = "Windbuffet Belt +1",
 		legs = "Meghanada Chausses +2",
 		feet = "Aya. Gambieras +1"
@@ -330,7 +335,7 @@ function get_sets()
 		hands = AdhemarWrist.TP,
 		ring1 = "Moonbeam ring",
 		ring2 = "Rajas Ring",
-		back = "Moonbeam Cape",
+		back = OgmaCape.DD,
 		waist = "Windbuffet Belt +1",
 		legs = "Meghanada Chausses +2",
 		feet = "Aya. Gambieras +1"
@@ -346,7 +351,7 @@ function get_sets()
 		hands=AdhemarWrist.TP, 
 		ring1="Defending ring", 
 		ring2="Moonbeam Ring",
-		back="Moonbeam Cape", 
+		back=OgmaCape.DD, 
 		waist="Windbuffet Belt +1", 
 		legs="Meg. Chausses +2", 
 		feet="Meg. Jam. +1"
@@ -371,7 +376,7 @@ function get_sets()
 		hands = "Adhemar Wristbands +1",
 		ring1 = "Epona's ring",
 		ring2 = "Regal Ring",
-		--back = Ogma.Reso,
+		back = OgmaCape.DD,
 		waist = "Fotia Belt",
 		legs = "Meghanada Chausses +2",
 		feet = "Carmine Greaves +1"
@@ -387,7 +392,7 @@ function get_sets()
 		hands = "Adhemar Wristbands +1",
 		ring1 = "Epona's ring",
 		ring2 = "Regal Ring",
-		back = " ",
+		back = OgmaCape.DD,
 		waist = "Fotia Belt",
 		legs = "Telchine Braconi",
 		feet = "Carmine Greaves +1"
@@ -411,7 +416,7 @@ function get_sets()
 		right_ear="Brutal Earring",
 		left_ring="Ifrit Ring",
 		right_ring="Ifrit Ring +1",
-		back="Moonbeam Cape"
+		back=OgmaCape.DD
 	}
 
 	sets.Resolution.AttackCapped = {
@@ -427,7 +432,7 @@ function get_sets()
 		right_ear="Brutal Earring",
 		left_ring="Ifrit Ring",
 		right_ring="Ifrit Ring +1",
-		back="Moonbeam Cape"
+		back=OgmaCape.DD
 	}
 	
 	sets.Resolution.Accuracy = {
@@ -443,7 +448,7 @@ function get_sets()
 		right_ear="Brutal Earring",
 		left_ring="Ifrit Ring",
 		right_ring="Ifrit Ring +1",
-		back="Moonbeam Cape"
+		back=OgmaCape.DD
 	}
 
 	sets.SanguineBlade = {
@@ -471,7 +476,7 @@ function get_sets()
 		ammo="Ginsen",
 		head=AdhemarHead.TP,
 		body="Meg. Cuirie +2",
-		hands="Meg. Gloves +1",
+		hands="Meg. Gloves +2",
 		legs="Meg. Chausses +2",
 		feet="Meg. Jam. +1",
 		neck="Fotia Gorget",
@@ -480,14 +485,14 @@ function get_sets()
 		right_ear="Tati Earring",
 		left_ring="Ifrit Ring",
 		right_ring="Ifrit Ring +1",
-		back="Moonbeam Cape"
+		back=OgmaCape.DD
 	}
 					
 	sets.Dimidiation.AttackCapped = {
 		ammo="Ginsen",
 		head=AdhemarHead.TP,
 		body="Meg. Cuirie +2",
-		hands="Meg. Gloves +1",
+		hands="Meg. Gloves +2",
 		legs="Meg. Chausses +2",
 		feet="Meg. Jam. +1",
 		neck="Fotia Gorget",
@@ -496,14 +501,14 @@ function get_sets()
 		right_ear="Tati Earring",
 		left_ring="Ifrit Ring",
 		right_ring="Ifrit Ring +1",
-		back="Moonbeam Cape"
+		back=OgmaCape.DD
 	}						   
 							   
 	sets.Dimidiation.Accuracy = {
 		ammo="Ginsen",
 		head=AdhemarHead.TP,
 		body="Meg. Cuirie +2",
-		hands="Meg. Gloves +1",
+		hands="Meg. Gloves +2",
 		legs="Meg. Chausses +2",
 		feet="Meg. Jam. +1",
 		neck="Fotia Gorget",
@@ -512,7 +517,7 @@ function get_sets()
 		right_ear="Mache Earring +1",
 		left_ring="Ifrit Ring",
 		right_ring="Ifrit Ring +1",
-		back="Moonbeam Cape"
+		back=OgmaCape.DD
 	}
 
 	sets.SavageBlade = {}
@@ -529,7 +534,7 @@ function get_sets()
 		hands = "Meghanada Gloves +2",
 		ring1 = "Karieyh Ring +1",
 		ring2 = "Niqmaddu Ring",
-		--back = Ogma.WSD,
+		back = OgmaCape.DD,
 		waist = "Prosilio Belt +1",
 		--legs = HerculeanLegs.WSD,
 		--feet = HerculeanFeet.WSD
@@ -545,7 +550,7 @@ function get_sets()
 		hands = "Meghanada Gloves +2",
 		ring2 = "Karieyh Ring +1",
 		ring1 = "Regal Ring",
-		--back = Ogma.WSD,
+		back = OgmaCape.DD,
 		waist = "Prosilio Belt +1",
 		--legs = HerculeanLegs.WSD,
 		--feet = HerculeanFeet.WSD
@@ -649,7 +654,7 @@ function get_sets()
 		hands="Rawhide Gloves",
 		ring1="Defending Ring",
 		ring2="Evanescence Ring",
-		back="Moonbeam Cape",
+		back=OgmaCape.Tank,
 		waist="Rumination Sash",
 		legs="Carmine Cuisses +1",
 		feet = "Taeon Boots"
@@ -693,7 +698,7 @@ function get_sets()
 		hands = "Turms Mittens +1",
 		ring1 = "Defending ring",
 		ring2 = "Gelatinous Ring +1",
-		--back = Ogma.Tank,
+		back = OgmaCape.Tank,
 		waist = "Engraved Belt",
 		legs = "Erilaz Leg Guards +1",
 		feet = "Erilaz Greaves +1"
@@ -709,7 +714,7 @@ function get_sets()
 		--hands = HerculeanGloves.DT,
 		ring1 = "Defending ring",
 		ring2 = "Shadow Ring",
-		--back = Ogma.Tank,
+		back = OgmaCape.Tank,
 		waist = "Engraved Belt",
 		legs = "Erilaz Leg Guards",
 		feet = "Erilaz Greaves"
@@ -780,7 +785,7 @@ function get_sets()
 		right_ear="Eabani Earring",
 		left_ring="Defending Ring",
 		right_ring="Eihwaz Ring",
-		back="Moonbeam Cape",
+		back=OgmaCape.Tank,
 	}
 
 	---------------------------------------------------------------
@@ -822,7 +827,7 @@ function get_sets()
 		hands = "Runeist's Mitons +1",
 		ring1 = "Stikini Ring",
 		ring2 = "Stikini Ring",
-		back = "Moonbeam Cape",
+		back = OgmaCape.Tank,
 		waist = "Flume Belt",
 		legs = "Carmine Cuisses +1",
 		feet = "Erilaz Greaves"
@@ -838,7 +843,7 @@ function get_sets()
 		hands = "Runeist's Mitons +1",
 		ring1 = "Defending Ring",
 		ring2 = "Stikini Ring",
-		back = "Moonbeam Cape",
+		back = OgmaCape.Tank,
 		waist = "Flume Belt",
 		legs = "Futhark Trousers +1",
 		feet = "Erilaz Greaves"
@@ -885,7 +890,7 @@ function get_sets()
 		right_ear="Sortiarius Earring",
 		left_ring="Shiva Ring +1",
 		right_ring="Shiva Ring +1",
-		back="Moonbeam Cape"
+		back=OgmaCape.DD
 	}
 
 	sets.JA.Sforzo = set_combine(sets.Enmity, {
@@ -899,7 +904,7 @@ function get_sets()
 	sets.JA.Vallation = set_combine(sets.Enmity, {
 		body = "Runeist's Coat +1",
 		legs = "Futhark Trousers +1",
-		back = "Ogma's Cape"
+		back = OgmaCape.Tank
 	})
 	
 	sets.JA.Pflug = set_combine(sets.Enmity, {
@@ -909,7 +914,7 @@ function get_sets()
 	sets.JA.Valiance = set_combine(sets.Enmity, {
 		body = "Runeist's Coat +1",
 		legs = "Futhark Trousers +1",
-		--back = Ogma.Tank
+		back = OgmaCape.Tank
 	})
 	
 	sets.JA.Embolden = set_combine(sets.Enmity, {
@@ -951,7 +956,7 @@ function get_sets()
 		right_ear="Sortiarius Earring",
 		left_ring="Moonbeam Ring",
 		right_ring="Defending Ring",
-		back="Moonbeam Cape"
+		back=OgmaCape.Tank
 	})
 	
 	sets.JA.Subterfuge = set_combine(sets.Enmity, {})
@@ -982,7 +987,7 @@ function get_sets()
 		right_ear="Sortiarius Earring",
 		left_ring="Prolix Ring",
 		right_ring="Defending Ring",
-		back="Moonbeam Cape",
+		back=OgmaCape.Tank,
 	}
 	
 	sets.precast.FastCast.Enhancing = set_combine(sets.precast.FastCast.Standard, {
