@@ -2,50 +2,19 @@
 --Highly recommend reviewing gearsets and replacing with personal items.
  
 --Also recommend changing key bind keys since everyone's keyboard and play style are different. ^ = CTRL, != ALT.
-
 function get_sets()
+    mote_include_version = 2
+
+    -- Load and initialize the include file.
+    include('Mote-Include.lua')
+	--include('Mote-Globals.lua')
+end
+
+function init_gear_sets()
 
 --F9 = Luzaf Ring On/Off
 --F10 = TP Index Toggle
 --F11 = Ranged Attack Index Toggle
-
-	TaeonHead = {}
-	TaeonHead.TP = { name="Taeon Chapeau", augments={'Accuracy+18 Attack+18','"Triple Atk."+2','DEX+7',}}
-	TaeonHead.MAG = { name="Taeon Chapeau", augments={'Mag. Acc.+14 "Mag.Atk.Bns."+14','Weapon Skill Acc.+17','Weapon skill damage +3%',}}
-	
-	TaeonBody = {}
-	TaeonBody.TP = { name="Taeon Tabard", augments={'Accuracy+19 Attack+19','"Triple Atk."+2','STR+6 DEX+6',}}
-	TaeonBody.MAG = { name="Taeon Tabard", augments={'Mag. Acc.+14 "Mag.Atk.Bns."+14','"Triple Atk."+2','Weapon skill damage +3%',}}
-	
-	TaeonHands = {}
-	TaeonHands.TP = { name="Taeon Gloves", augments={'Accuracy+25','"Dual Wield"+5','DEX+10',}}
-	
-	TaeonLegs = {}
-	TaeonLegs.TP = { name="Taeon Tights", augments={'Accuracy+20 Attack+20','"Triple Atk."+2','STR+6 DEX+6',}}
-	TaeonLegs.MAG = { name="Taeon Tights", augments={'"Mag.Atk.Bns."+19','"Dual Wield"+4','Weapon skill damage +2%',}}
-	
-	TaeonFeet = {}
-	TaeonFeet.TP = { name="Taeon Boots", augments={'Accuracy+20 Attack+20','"Dual Wield"+5','STR+6 DEX+6',}}
-	TaeonFeet.MAG = { name="Taeon Boots", augments={'"Mag.Atk.Bns."+18','Weapon Skill Acc.+10','Weapon skill damage +3%',}}
-	
-	AdhemarWrist = {}
-	AdhemarWrist.TP = {name="Adhemar Wrist. +1", augments={'STR+12','DEX+12','Attack+20'}}
-	
-	AdhemarHead = {}
-	AdhemarHead.TP = {name="Adhemar Bonnet", augments={'STR+10', 'DEX+10', 'Attack+15'}}
-	
-	CarmineHand = {}
-	CarmineHand.MAG = {name="Carmine Fin. Ga. +1", augments={'Rng. Atk.+20','"Mag. Atk. Bns."+12','"Store TP"+6'}}
-	
-	CamCape = {}
-	CamCape.TP = {name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10'}}
-	CamCape.Last = {name="Camulus's Mantle", augments={'AGI+20', 'Rng. Acc.+20 Rng. Atk.+20', 'Weapon skill damage +10%'}}
-	CamCape.Leaden = {name="Camulus's Mantle", augments={'AGI+20', 'Mag. Acc.+20 /Mag. Dmg.+20', 'AGI+7','Weapon skill damage +10%'}}
-	CamCape.IdleDTMagEva = { name="Camulus's Mantle", augments={'INT+20','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','"Snapshot"+10','"Regen"+5',}}
-	CamCape.SavageBl = { name="Camulus's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}}
-
-	AdhemJack = {}
-	AdhemJack.TP = {name="Adhemar Jacket +1", augments={'DEX+12','AGI+12','Accuracy+20'}}
 	
 		send_command('bind f9 gs c toggle Luz')
 		send_command('bind f10 gs c toggle TP set')
@@ -102,20 +71,20 @@ function get_sets()
 		
 		sets.TP.Reg = {
 					 head=AdhemarHead.TP, neck="Asperity necklace", ear1="Suppanomimi", ear2="Eabani Earring",
-					 body=AdhemJack.TP, hands=AdhemarWrist.TP, ring1="Rajas Ring", ring2="Apate ring",
-					 back=CamCape.TP, waist="Windbuffet belt +1", legs=TaeonLegs.TP, feet=TaeonFeet.TP}
+					 body=AdhemarJack.TP, hands=AdhemarWrist.TP, ring1="Rajas Ring", ring2="Apate ring",
+					 back=CamCape.TP, waist="Windbuffet belt +1", legs=HercLegs.TP, feet=HercFeet.TP}
 							
 						
 		sets.TP.Acc = {
-					 head="Meghanada Visor +1", neck="Asperity necklace", ear1="Dudgeon earring", ear2="Heartseeker earring",	
+					 head="Meghanada Visor +2", neck="Asperity necklace", ear1="Dudgeon earring", ear2="Heartseeker earring",	
 					 body="Meg. Cuirie +2", hands=AdhemarWrist.TP, ring1="Enlivened ring", ring2="Rajas ring",
-					 back=CamCape.TP, waist="Windbuffet belt +1", legs="Meg. Chausses +1", feet="Meg. Jam. +1"}
+					 back=CamCape.TP, waist="Windbuffet belt +1", legs="Meg. Chausses +2", feet="Meg. Jam. +1"}
 								
 								
 		sets.TP.DT = {
-					head="Meghanada Visor +1", neck="Twilight torque", ear1="Bladeborn Earring", ear2="Steelflash Earring",
+					head="Meghanada Visor +2", neck="Twilight torque", ear1="Bladeborn Earring", ear2="Steelflash Earring",
 					body="Meg. Cuirie +2", hands="Meg. Gloves +2", ring1="Defending ring", ring2="Lunette Ring +1",
-					back="Moonbeam Cape", waist="Flume belt", legs="Meg. Chausses +1", feet="Meg. Jam. +1"}
+					back="Moonbeam Cape", waist="Flume belt", legs="Meg. Chausses +2", feet="Meg. Jam. +1"}
 		
 		--Snapshot Set--
 		sets.Snapshot = {}
@@ -137,14 +106,14 @@ function get_sets()
 		
 		RA_Index = 1
 		sets.RA.Reg = {
-				   head="Meghanada Visor +1", neck="Comm. Charm +1", ear1="Moonshade Earring", ear2="Volley earring",
+				   head="Meghanada Visor +2", neck="Comm. Charm +1", ear1="Moonshade Earring", ear2="Volley earring",
 				   body="Mummu Jacket +2", hands=AdhemarWrist.TP, ring1="Garuda Ring", ring2="Garuda Ring +1",
-				   back=CamCape.Last, waist="Yemaya Belt", legs="Meg. Chausses +1", feet="Meg. Jam. +1"}
+				   back=CamCape.Last, waist="Yemaya Belt", legs="Meg. Chausses +2", feet="Meg. Jam. +1"}
 								  
 		sets.RA.Acc = {
-					head="Meghanada Visor +1", neck="Comm. Charm +1", ear1="Volley earring", ear2="Clearview earring",				  
+					head="Meghanada Visor +2", neck="Comm. Charm +1", ear1="Volley earring", ear2="Clearview earring",				  
 					body="Mummu Jacket +2", hands="Meg. Gloves +2", ring1="Longshot Ring", ring2="Hajduk ring",
-					back=CamCape.Last, waist="Yemaya Belt", legs="Meg. Chausses +1", feet="Meg. Jam. +1"}						   
+					back=CamCape.Last, waist="Yemaya Belt", legs="Meg. Chausses +2", feet="Meg. Jam. +1"}						   
 								   
 		--Melee WS Sets--
 		
@@ -155,7 +124,7 @@ function get_sets()
 		sets.Requi.Reg = {
 				   head="Meghanada Visor +1", neck="Breeze Gorget", ear1="Moonshade Earring", ear2="Tati Earring",
 				   body="Meg. Cuirie +2", hands="Meg. Gloves +2", ring1="Epona's ring", ring2="Aquasoul ring",
-				   back="Atheling mantle", waist="Breeze belt", legs="Meg. Chausses +1", feet="Meg. Jam. +1"}
+				   back="Atheling mantle", waist="Breeze belt", legs="Meg. Chausses +2", feet="Meg. Jam. +1"}
 								  
 		sets.Requi.Acc = set_combine(sets.Requi.Reg,{ear1="Bladeborn earring", 
 				   ear2="Steelflash earring",body="Manibozho jerkin", legs="Manibozho brais"})
@@ -174,12 +143,12 @@ function get_sets()
 		SBlade_Index = 1
 		
 		sets.SBlade.Reg = {
-					head="Meghanada Visor +1", neck="Lacono Neck. +1", ear1="Tati earring", ear2="Tati Earring",
+					head="Meghanada Visor +2", neck="Lacono Neck. +1", ear1="Moonshade earring", ear2="Tati Earring",
 					 body="Meg. Cuirie +2", hands="Meg. Gloves +2", ring1="Overbearing Ring", ring2="Ifrit ring +1",
-					 back=CamCape.SavageBl, waist="Prosilio Belt +1", legs="Meg. Chausses +1", feet="Meg. Jam. +1"}
+					 back=CamCape.SavageBl, waist="Prosilio Belt +1", legs="Meg. Chausses +2", feet="Meg. Jam. +1"}
 					 
-		sets.SBlade.Acc = set_combine(sets.SBlade.Reg,{head="Meghanada Visor",body="Meghanada Cuirie +1",
-						legs="Meg. Chausses +1", feet="Meg. Jam. +1"}) 
+		sets.SBlade.Acc = set_combine(sets.SBlade.Reg,{head="Meghanada Visor +2",body="Meghanada Cuirie +2",
+						legs="Meg. Chausses +2", feet="Meg. Jam. +1"}) 
 		
 		
 		--Ranged WS Sets--
@@ -189,9 +158,9 @@ function get_sets()
 		LSalute_Index = 1
 		
 		sets.LSalute.Reg = {ammo="Eminent Bullet",
-	  				    head="Pixie Hairpin +1", neck="Sanctity Necklace", ear1="Sortiarius Earring", ear2="Friomisi earring",		        
+	  				    head="Pixie Hairpin +1", neck="Sanctity Necklace", ear1="Moonshade Earring", ear2="Friomisi earring",		        
 						body="Rawhide Vest", hands=CarmineHand.MAG, ring1="Archon ring", ring2="Arvina Ringlet +1",
-					    back=CamCape.Leaden, waist="Eschan Stone", legs=TaeonLegs.MAG, feet=TaeonFeet.MAG}
+					    back=CamCape.Leaden, waist="Eschan Stone", legs="", feet=""}
 		
 		sets.LSalute.Acc = set_combine(sets.LSalute.Reg,{ring1="Sangoma Ring"})
 					
@@ -201,12 +170,12 @@ function get_sets()
 		WFire_Index = 1
 		
 		sets.WFire.Reg = {ammo="Eminent Bullet",
-					     head=TaeonHead.MAG, neck="Sanctity Necklace", ear1="Sortiarius Earring", ear2="Friomisi earring",		        
+					     head="", neck="Sanctity Necklace", ear1="Moonshade Earring", ear2="Friomisi earring",		        
 						body="Rawhide Vest", hands=CarmineHand.MAG, ring1="Garuda Ring +1", ring2="Arvina Ringlet +1",
-					    back=CamCape.Leaden, waist="Eschan Stone", legs=TaeonLegs.MAG, feet=TaeonFeet.MAG}
+					    back=CamCape.Leaden, waist="Eschan Stone", legs="", feet=""}
 
         sets.WFire.Acc = {ammo="Eminent Bullet",
-					      head="Lanun tricorne +1", neck="Stoicheion medal", ear1="Novio earring", ear2="Friomisi earring",				       
+					      head="Lanun tricorne +1", neck="Stoicheion medal", ear1="Moonshade earring", ear2="Friomisi earring",				       
 						  body="Rawhide Vest", hands=CarmineHand.MAG, ring1="Acumen ring", ring2="Sangoma ring",
 					      back=CamCape.Leaden, waist="Elanid belt", legs="Lak. trews +1", feet="Lanun bottes +1"}
 		
@@ -216,12 +185,12 @@ function get_sets()
 		LastS_Index = 1
 		
 		sets.LastS.Reg = {ammo="Eminent Bullet",
-						head="Meghanada Visor +1",neck="Fotia Gorget",ear1="Bladeborn earring",ear2="Brutal Earring",
+						head="Meghanada Visor +2",neck="Fotia Gorget",ear1="Moonshade earring",ear2="Brutal Earring",
 						body="Meg. Cuirie +2", hands="Meg. Gloves +2",ring1="Garuda Ring +1",ring2="Apate ring",
-						back=CamCape.Last,waist="Fotia Belt", legs="Meg. Chausses +1",feet="Meg. Jam. +1"}
+						back=CamCape.Last, waist="Fotia Belt", legs="Meg. Chausses +2",feet="Meg. Jam. +1"}
 		
-		sets.LastS.Acc = set_combine(sets.LastS.Reg,{ring1="Longshot Ring",head="Meghanada Visor",body="Meghanada Cuirie +1",
-						legs="Meg. Chausses +1", feet="Meg. Jam. +1"})
+		sets.LastS.Acc = set_combine(sets.LastS.Reg,{ring1="Longshot Ring",head="Meghanada Visor +2",body="Meghanada Cuirie +2",
+						legs="Meg. Chausses +2", feet="Meg. Jam. +1"})
 		
 		sets.QD = {}
 		sets.QD.index = {'Reg','MAcc'}
@@ -231,7 +200,7 @@ function get_sets()
 		sets.QD.Reg = {ammo="Eminent Bullet",
 					 head="Mummu bonnet +2",neck="Sanctity Necklace",ear1="Volley earring",ear2="Friomisi earring",
 					 body="Mummu Jacket +2",hands=CarmineHand.MAG,ring1="Mummu Ring",ring2="Stikini Ring",					      
-					 back=CamCape.Leaden,waist="Kwahu Kachina Belt",legs="Mummu kecks +2", feet="Mummu Gamash. +1"}
+					 back=CamCape.Leaden, waist="Kwahu Kachina Belt",legs="Mummu kecks +2", feet="Mummu Gamash. +1"}
 									  
 		sets.QD.MAcc = set_combine(sets.QD.Reg,{ring2="Sangoma Ring",feet="Nvrch. bottes +2"})
 		
@@ -239,7 +208,7 @@ function get_sets()
         sets.QD.Pre = {ammo="Eminent Bullet",
 					 head="Lak. hat +1",neck="Comm. Charm +1",ear1="Novio earring",ear2="Friomisi earring",
 					 body="Mirke wardecors",hands="Lak. Gants +1",ring1="Stikini Ring",ring2="Mummu Ring",					      
-					 back="Gunslinger's cape",waist="Kwahu Kachina Belt",legs=TaeonLegs.MAG, feet="Lanun Bottes +1"}	
+					 back="Gunslinger's cape", waist="Kwahu Kachina Belt",legs="", feet="Lanun Bottes +1"}	
 	
 		sets.QD.LightShot = set_combine(sets.QD.Reg,{head="Laksamana Hat +1"})
 		

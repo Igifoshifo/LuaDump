@@ -17,26 +17,16 @@
 
 
 --Augmented Gear--
-
 function get_sets()
-	maps()
+    mote_include_version = 2
 
-	AdhemarJacket = {}
-	AdhemarJacket.TP = { name="Adhemar Jacket +1", augments={'DEX+12','AGI+12','Accuracy+20',}}
-	
-	AdhemarWrist = {}
-	AdhemarWrist.TP = {name="Adhemar Wrist. +1", augments={'STR+12','DEX+12','Attack+20'}}
-	
-	AdhemarHead = {}
-	AdhemarHead.TP = {name="Adhemar Bonnet", augments={'STR+10', 'DEX+10', 'Attack+15'}}
-	
-	OgmaCape = {}
-	OgmaCape.Tank = { name="Ogma's cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Enmity+10','Phys. dmg. taken-10%',}}
-	OgmaCape.DD = { name="Ogma's cape", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}
-	
-	TaeonHead = {}
-	
-	TaeonBody = {}
+    -- Load and initialize the include file.
+    include('Mote-Include.lua')
+	--include('Mote-Globals.lua')
+end
+
+function init_gear_sets()
+	maps()
 	
 ------End of Augmented Gear-----------------------------------------------------------------------------------------------------------------------------
 	--Idle Sets--
@@ -103,7 +93,7 @@ function get_sets()
 		neck = "Anu Torque",
 		ear1 = "Suppanomimi",
 		ear2 = "Sherida Earring",
-		body = AdhemarJacket.TP,
+		body = AdhemarJack.TP,
 		hands = "Adhemar Wristbands",
 		ring1 = "Epona's ring",
 		ring2 = "Niqmaddu Ring",
@@ -120,7 +110,7 @@ function get_sets()
 		ear1 = "Suppanomimi",
 		ear1 = "Suppanomimi",
 		ear2 = "Sherida Earring",
-		body = AdhemarJacket.TP,
+		body = AdhemarJack.TP,
 		hands = "Adhemar Wristbands +1",
 		ring1 = "Epona's ring",
 		ring2 = "Niqmaddu Ring",
@@ -136,7 +126,7 @@ function get_sets()
 		neck = "Lissome Necklace",
 		ear1 = "Suppanomimi",
 		ear2 = "Sherida Earring",
-		body = AdhemarJacket.TP,
+		body = AdhemarJack.TP,
 		hands = "Adhemar Wristbands +1",
 		ring1 = "Epona's ring",
 		ring2 = "Niqmaddu Ring",
@@ -152,7 +142,7 @@ function get_sets()
 		neck = "Combatant's Torque",
 		ear1 = "Suppanomimi",
 		ear2 = "Telos Earring",
-		body = AdhemarJacket.TP,
+		body = AdhemarJack.TP,
 		hands = "Adhemar Wristbands +1",
 		ring1 = "Epona's ring",
 		ring2 = "Niqmaddu Ring",
@@ -168,7 +158,7 @@ function get_sets()
 		neck = "Combatant's Torque",
 		ear1 = "Mache Earring +1",
 		ear2 = "Telos Earring",
-		body = AdhemarJacket.TP,
+		body = AdhemarJack.TP,
 		--hands = HerculeanGloves.HighAcc,
 		ring1 = "Cacoethic Ring +1",
 		ring2 = "Niqmaddu Ring",
@@ -189,10 +179,10 @@ function get_sets()
 	sets.TwoHandedTP.CappedHaste = {
 		ammo = "Ginsen",
 		head=AdhemarHead.TP,
-		body=AdhemarJacket.TP,
+		body=AdhemarJack.TP,
 		hands=AdhemarWrist.TP,
-		legs="Meg. Chausses +2",
-		feet="Aya. Gambieras +1",
+		legs=HercLegs.TA,
+		feet=HercFeet.TA,
 		neck="Asperity Necklace",
 		waist="Windbuffet Belt +1",
 		left_ear="Mache Earring +1",
@@ -205,7 +195,7 @@ function get_sets()
 	sets.TwoHandedTP.AccuracyLite = {
 		ammo = "Ginsen",
 		head="Meghanada Visor +2",
-		body=AdhemarJacket.TP,
+		body=AdhemarJack.TP,
 		hands=AdhemarWrist.TP,
 		legs="Meg. Chausses +2",
 		feet="Aya. Gambieras +1",
@@ -221,7 +211,7 @@ function get_sets()
 	sets.TwoHandedTP.AccuracyMid = {
 		ammo = "Ginsen",
 		head="Meghanada Visor +2",
-		body=AdhemarJacket.TP,
+		body=AdhemarJack.TP,
 		hands=AdhemarWrist.TP,
 		legs="Meg. Chausses +2",
 		feet="Aya. Gambieras +1",
@@ -240,7 +230,7 @@ function get_sets()
 		neck="Sanctity Necklace", 
 		left_ear="Mache Earring +1",
 		right_ear="Mache Earring +1",
-		body=AdhemarJacket.TP,
+		body=AdhemarJack.TP,
 		hands=AdhemarWrist.TP, 
 		ring1="Defending ring", 
 		ring2="Moonbeam Ring",
@@ -296,10 +286,10 @@ function get_sets()
 	sets.TankingTP.Tank = {
 		ammo="Ginsen",
 		head=AdhemarHead.TP,
-		body=AdhemarJacket.TP,
+		body=AdhemarJack.TP,
 		hands=AdhemarWrist.TP,
-		legs="Meg. Chausses +2",
-		feet="Aya. Gambieras +1",
+		legs=HercLegs.TA,
+		feet=HercFeet.TA,
 		neck="Asperity Necklace",
 		waist="Windbuffet Belt +1",
 		left_ear="Mache Earring +1",
@@ -315,7 +305,7 @@ function get_sets()
 		neck = "Asperity Necklace",
 		ear1 = "Mache Earring +1",
 		ear2 = "Brutal Earring", 
-		body = AdhemarJacket.TP,
+		body = AdhemarJack.TP,
 		hands = AdhemarWrist.TP,
 		ring1 = "Defending ring",
 		ring2 = "Moonbeam Ring",
@@ -331,7 +321,7 @@ function get_sets()
 		neck = "Asperity Necklace",
 		ear1 = "Mache Earring +1",
 		ear2 = "Brutal Earring", 
-		body = AdhemarJacket.TP,
+		body = AdhemarJack.TP,
 		hands = AdhemarWrist.TP,
 		ring1 = "Moonbeam ring",
 		ring2 = "Rajas Ring",
@@ -347,7 +337,7 @@ function get_sets()
 		neck="Sanctity Necklace", 
 		left_ear="Mache Earring +1",
 		right_ear="Mache Earring +1",
-		body=AdhemarJacket.TP,
+		body=AdhemarJack.TP,
 		hands=AdhemarWrist.TP, 
 		ring1="Defending ring", 
 		ring2="Moonbeam Ring",
@@ -372,7 +362,7 @@ function get_sets()
 		neck = "Fotia Gorget",
 		ear1 = "Moonshade Earring",
 		ear2 = "Sherida Earring",
-		body = AdhemarJacket.TP,
+		body = AdhemarJack.TP,
 		hands = "Adhemar Wristbands +1",
 		ring1 = "Epona's ring",
 		ring2 = "Regal Ring",
@@ -388,7 +378,7 @@ function get_sets()
 		neck = "Fotia Gorget",
 		ear1 = "Cessance Earring",
 		ear2 = "Telos Earring",
-		body = AdhemarJacket.TP,
+		body = AdhemarJack.TP,
 		hands = "Adhemar Wristbands +1",
 		ring1 = "Epona's ring",
 		ring2 = "Regal Ring",
@@ -406,7 +396,7 @@ function get_sets()
 	sets.Resolution.AttackUncapped = {
 		ammo="Ginsen",
 		head=AdhemarHead.TP,
-		body=AdhemarJacket.TP,
+		body=AdhemarJack.TP,
 		hands=AdhemarWrist.TP,
 		legs="Meg. Chausses +2",
 		feet="Meg. Jam. +1",
@@ -422,7 +412,7 @@ function get_sets()
 	sets.Resolution.AttackCapped = {
 		ammo="Ginsen",
 		head=AdhemarHead.TP,
-		body=AdhemarJacket.TP,
+		body=AdhemarJack.TP,
 		hands=AdhemarWrist.TP,
 		legs="Meg. Chausses +2",
 		feet="Meg. Jam. +1",
@@ -438,7 +428,7 @@ function get_sets()
 	sets.Resolution.Accuracy = {
 		ammo="Ginsen",
 		head=AdhemarHead.TP,
-		body=AdhemarJacket.TP,
+		body=AdhemarJack.TP,
 		hands=AdhemarWrist.TP,
 		legs="Meg. Chausses +2",
 		feet="Meg. Jam. +1",
@@ -526,7 +516,7 @@ function get_sets()
 	SavageBlade_ind = 1
 	sets.SavageBlade.Attack = {
 		ammo = "Knobkierrie",
-		--head = HerculeanHelm.WSD,
+		head = HercHead.WSD,
 		neck = "Caro Necklace",
 		ear1 = "Moonshade Earring",
 		ear2 = "Sherida Earring",
@@ -536,24 +526,24 @@ function get_sets()
 		ring2 = "Niqmaddu Ring",
 		back = OgmaCape.DD,
 		waist = "Prosilio Belt +1",
-		--legs = HerculeanLegs.WSD,
-		--feet = HerculeanFeet.WSD
+		legs = HercLegs.WSD,
+		feet = HercFeet.WSD
 	}
 
 	sets.SavageBlade.Accuracy = {
 		ammo = "Seething Bomblet +1",
-		--head = HerculeanHelm.WSD,
+		head = HercHead.WSD,
 		neck = "Fotia Gorget",
 		ear1 = "Moonshade Earring",
 		ear2 = "Telos Earring",
-		--body = AdhemarJacket.TP,
+		body = AdhemarJack.TP,
 		hands = "Meghanada Gloves +2",
 		ring2 = "Karieyh Ring +1",
 		ring1 = "Regal Ring",
 		back = OgmaCape.DD,
 		waist = "Prosilio Belt +1",
-		--legs = HerculeanLegs.WSD,
-		--feet = HerculeanFeet.WSD
+		legs = HercLegs.WSD,
+		feet = HercFeet.WSD
 	}
 	
 		sets.FlashNova = {
@@ -578,7 +568,7 @@ function get_sets()
 	BlackHalo_ind = 1
 	sets.BlackHalo.Attack = {
 		ammo = "Knobkierrie",
-		--head = HerculeanHelm.WSD,
+		head = HercHead.WSD,
 		neck = "Caro Necklace",
 		ear1 = "Moonshade Earring",
 		ear2 = "Sherida Earring",
@@ -588,8 +578,8 @@ function get_sets()
 		ring2 = "Niqmaddu Ring",
 		--back = Ogma.WSD,
 		waist = "Prosilio Belt +1",
-		--legs = HerculeanLegs.WSD,
-		--feet = HerculeanFeet.WSD
+		legs = HercLegs.WSD,
+		feet = HercFeet.WSD
 	}
 
 	sets.BlackHalo.Accuracy = set_combine(sets.BlackHalo.Attack, {})
@@ -604,8 +594,8 @@ function get_sets()
 		neck = "Fotia Gorget",
 		ear1 = "Moonshade Earring",
 		ear2 = "Sherida Earring",
-		body = AdhemarJacket.TP,
-		--hands = HerculeanGloves.WSD,
+		body = AdhemarJack.TP,
+		hands = HercHands.WSD,
 		ring1 = "Epona's ring",
 		ring2 = "Rufescent Ring",
 		back = "Cornflower Cape",
